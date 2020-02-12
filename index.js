@@ -16,16 +16,16 @@ function nowServing(deli) {
 }
 
 function currentLine(deli) {
-  if (deli.length == 0) {
+  if (!deli.length) {
     return "The line is currently empty.";
   }
 
-  var devuelve = "The line is currently: ";
-  for (var i = 1; i < deli.length; i++) {
-    devuelve += `${i}. ${deli[i]}, `;
+  const numbersAndNames = [];
+  for (let i = 0, l = deli.length; i < l; i++) {
+    numbersAndNames.push(`${i + 1}. ${deli[i]}`);
   }
-  // incluye el ultimo, sin la coma final
-  devuelve += `${i}. ${deli[i]}`;
 
-  return devuelve;
-}
+  /* Keep in mind, join() is a a shorthand for looping and building
+   * into a String. */
+  return `The line is currently: ${numbersAndNames.join(', ')}`;
+};
