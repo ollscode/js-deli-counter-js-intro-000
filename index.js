@@ -22,7 +22,7 @@ function currentLine(deli) {
 
   var devuelve = "The line is currently: ";
   for (var i = 1; i < deli.length; i++) {
-    devuelve += `${i}. ${deli[i]}, `);
+    devuelve += `${i}. ${deli[i]}, `;
   }
   // incluye el ultimo, sin la coma final
   devuelve += `${i}. ${deli[i]}`);
