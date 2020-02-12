@@ -25,7 +25,7 @@ function currentLine(deli) {
     devuelve += `${i}. ${deli[i]}, `;
   }
   // incluye el ultimo, sin la coma final
-  devuelve += `${i}. ${deli[i]}`);
+  devuelve += `${i}. ${deli[i]}`;
 
   return devuelve;
 }
